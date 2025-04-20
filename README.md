@@ -286,9 +286,3 @@ const url = "https://your-codespace-5000.app.github.dev/api/..."
 
 ---
 
-Let me know if you want to:
-- Add this as a separate `docs/FAQ.md` file too  
-- Link to this from the top of the README  
-- Keep adding more entries as we build!
-
-You're creating a seriously dev-friendly starter 💪
