@@ -119,6 +119,11 @@ npx serve .
 - Make the frontend port public (3000 or 4173)
 - Open the link — you’ll see a mobile-style UI with working API integration
 
+<p align="center">
+  <img src="./docs/AppScreenshot.png" width="300" alt="Mobile App UI" />
+</p>
+<p align="center"><em>📱 Mobile-styled UI after setup is complete</em></p>
+
 ---
 
 ## 📦 Project Structure
