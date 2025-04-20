@@ -201,3 +201,94 @@ git remote -v
 This keeps your base updated and ready for reuse across projects. 🚀
 
 ---
+
+Absolutely! Here's a polished **FAQ section** you can drop directly into your `README.md` to address all the real-world issues that came up:
+
+---
+
+## ❓ FAQ – Common Issues & How to Fix Them
+
+Here are a few helpful tips based on feedback from developers using this starter in Codespaces and beyond:
+
+---
+
+### 🧩 Q: Why does `npm run dev` give me an error?
+
+> **A:** This starter doesn’t use Vite by default, so `npm run dev` will fail unless you manually add the script.
+
+If you want to enable it:
+
+```json
+// Add to frontend/package.json
+"scripts": {
+  "dev": "vite",
+  "build": "node build.js"
+}
+```
+
+By default, this starter uses:
+
+```bash
+npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch
+node build.js
+npx serve .
+```
+
+---
+
+### ⚙️ Q: I'm getting a PostCSS config error when using `"type": "module"`
+
+> **A:** If your `package.json` uses `"type": "module"`, PostCSS expects an ES module format too.
+
+✅ Either rename the file:
+
+```bash
+postcss.config.js ➜ postcss.config.cjs
+```
+
+**OR** use ESM syntax inside the file:
+
+```js
+// postcss.config.js
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+```
+
+---
+
+### 🌀 Q: I updated the components but still see "Fullstack Starter 🔥" on screen?
+
+> **A:** This happens if you didn’t clear the sample content in `index.html` or Starter.jsx.
+
+✅ Make sure to:
+- Remove or comment out any `<h1>Fullstack Starter 🔥</h1>` blocks
+- Replace the JSX in `main.jsx` or `App.jsx` with your new components
+
+This keeps the screen clean for your app layout.
+
+---
+
+### 🌍 Q: Why do my fetch requests fail in Codespaces?
+
+> **A:** If you’re using `"proxy": "http://localhost:5000"` in `package.json`, it will break in Codespaces or production.
+
+✅ Best practice: use full URLs to your **public backend port**:
+
+```js
+const url = "https://your-codespace-5000.app.github.dev/api/..."
+```
+
+> 🔒 Make sure port 5000 is set to **Public** in the Codespaces ports tab.
+
+---
+
+Let me know if you want to:
+- Add this as a separate `docs/FAQ.md` file too  
+- Link to this from the top of the README  
+- Keep adding more entries as we build!
+
+You're creating a seriously dev-friendly starter 💪
