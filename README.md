@@ -196,5 +196,3 @@ git remote -v
 This keeps your base updated and ready for reuse across projects. 🚀
 
 ---
-
-Let me know when you’re ready to move on to the `kickoff-template.md`!
